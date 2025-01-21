@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cute Website</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Comic Sans MS', 'Arial', sans-serif;
+            background-color: #ffe4e1;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background: #fff0f5;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #ff69b4;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #ff1493;
+        }
+
+        .heart {
+            color: #ff69b4;
+            font-size: 3rem;
+        }
+
+        button {
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #ff1493;
+        }
+
+        #message {
+            margin-top: 20px;
+            font-size: 1.1rem;
+            color: #ff69b4;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heart">❤</div>
+        <h1>Welcome to My Cute Page Dido!</h1>
+        <p>
+Dear FBI Didi,
+I'm just a little harmless bean trying to survive in this big, chaotic world. Arresting me would break my soft, squishy heart 💔. Let's settle this with chai and snacks instead? 🥺🙏</p>
+        <button onclick="showMessage()">Click Me!</button>
+        <button onclick="changeHeart()">Change Heart</button>
+        <div id="message">You clicked the button! Stay awesome! 🌟</div>
+    </div>
+
+    <script>
+        function showMessage() {
+            const message = document.getElementById('message');
+            message.style.display = 'block';
+        }
+
+        function changeHeart() {
+            const heart = document.querySelector('.heart');
+            heart.textContent = heart.textContent === '❤' ? '💖' : '❤';
+        }
+    </script>
+</body>
+</html>
